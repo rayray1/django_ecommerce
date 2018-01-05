@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.flatpages',
     'main',
-    'contact'
+    'contact',
+    'payments',
 ]
 
 MIDDLEWARE = [
@@ -122,6 +123,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
+
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
 STATIC_URL = '/static/'
 
 SITE_ID = 1
+
+STRIPE_SECRET = 'sk_test_ekZ1KqnjiDsm0IaitW4ZOonl'
+STRIPE_PUBLISHABLE = 'pk_test_vS6YgsgGd563i3RlCK4c4pt3'
